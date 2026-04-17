@@ -460,6 +460,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
+    display: block;
     transition: transform 0.4s;
   }
 
@@ -589,8 +591,7 @@
 
   .modal-img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+    height: 320px;
     border-radius: 28px 28px 0 0;
     background: linear-gradient(135deg, #e0f5ff, #ffe0f5);
     display: flex;
@@ -598,17 +599,24 @@
     justify-content: center;
     font-size: 8rem;
     overflow: hidden;
+    position: relative;
   }
 
   .modal-img img {
+    position: absolute;
+    top: 0; left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
+    display: block;
   }
 
   .modal-img .emoji-big {
     font-size: 8rem;
     filter: drop-shadow(0 10px 30px rgba(0,0,0,0.2));
+    position: relative;
+    z-index: 1;
   }
 
   .modal-body {
@@ -1078,3 +1086,66 @@
     opacity: 1;
     transform: translateY(0);
   }
+/* ===== CATEGORY FILTERS ===== */
+.category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+  max-width: 900px;
+}
+
+.filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 2px solid #e0e0e0;
+  background: #fff;
+  color: var(--dark);
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.filter-btn:hover {
+  border-color: var(--pink);
+  color: var(--pink);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(237,48,147,0.15);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, var(--pink), #ff6bb3);
+  border-color: var(--pink);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(237,48,147,0.35);
+  transform: translateY(-2px);
+}
+
+.no-products {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 1.1rem;
+  color: #999;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .category-filters {
+    gap: 8px;
+    padding: 0 16px;
+    margin-bottom: 28px;
+  }
+  .filter-btn {
+    font-size: 0.8rem;
+    padding: 8px 14px;
+  }
+}
