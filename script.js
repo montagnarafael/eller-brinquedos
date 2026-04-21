@@ -32,7 +32,7 @@ const products = [
     badge: "Novidade",
     images: [
       "./img/futeboldesabao.jpg",
-      // "./img/futeboldesabao2.jpg",
+      "./img/futeboldesabao2.jpg",
     ],
     desc: "Diversão garantida com o Futebol de Sabão! Arena inflável para jogar futebol em superfície escorregadia.",
     color: "#ffe0f0",
@@ -54,7 +54,7 @@ const products = [
     badge: "Infantil",
     images: [
       "./img/piscinadebolinhas.jpg",
-      // "./img/piscinadebolinhas2.jpg",
+      "./img/piscinadebolinhas2.jpg",
     ],
     desc: "Piscina inflável de bolinhas coloridas, perfeita para os pequenos se divertirem em festas e eventos.",
     color: "#fff9d6",
@@ -75,7 +75,7 @@ const products = [
     badge: "Clássico",
     images: [
       "./img/guerradecotonete.jpg",
-      // "./img/guerradecotonete2.jpg",
+      "./img/guerradecotonete2.jpg",
     ],
     desc: "O clássico castelo inflável! Perfeito para festas infantis. Colorido e super divertido para as crianças.",
     color: "#f0e0ff",
