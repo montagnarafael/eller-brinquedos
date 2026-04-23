@@ -16,6 +16,8 @@ const products = [
     color: "#e0f5ff",
     specs: [
       { icon: "👶", label: "Faixa Etária", value: "3 a 12 anos", color: "blue-card" },
+      { icon: "💰", label: "Parcelamento", value: "até 12x no Cartão", color: "pink-card" },
+      { icon: "✅", label: "Garantia", value: "6 Meses Contra Defeitos de Fabricação", color: "pink-card" },
       { icon: "📐", label: "Comprimento", value: "5 metros", color: "pink-card" },
       { icon: "📏", label: "Largura", value: "2.80 metros", color: "yellow-card" },
       { icon: "📏", label: "Altura", value: "4.20 metros", color: "yellow-card" },
@@ -76,17 +78,22 @@ const products = [
     images: [
       "./img/guerradecotonete.jpg",
       "./img/guerradecotonete2.jpg",
+      "./img/guerradecotonete3.jpg",
     ],
     desc: "O clássico castelo inflável! Perfeito para festas infantis. Colorido e super divertido para as crianças.",
     color: "#f0e0ff",
     specs: [
-      { icon: "👶", label: "Faixa Etária", value: "2 a 10 anos", color: "blue-card" },
+      { icon: "👶", label: "Faixa Etária", value: "Crianças e Adultos", color: "blue-card" },
+      { icon: "💰", label: "Parcelamento", value: "até 12x no Cartão", color: "pink-card" },
+      { icon: "✅", label: "Garantia", value: "6 Meses Contra Defeitos de Fabricação", color: "pink-card" },
       { icon: "📐", label: "Comprimento", value: "4.15 metros", color: "pink-card" },
+      { icon: "📐", label: "Parede Lateral", value: "70 centímetros", color: "pink-card" },
       { icon: "📏", label: "Largura", value: "4.15 metros", color: "yellow-card" },
-      { icon: "🧵", label: "Material", value: "Lona Sansuy BI", color: "green-card" },
+      { icon: "📏", label: "Altura Total", value: "1.20 metros", color: "yellow-card" },
+      { icon: "🧵", label: "Material", value: "Lona kp1000 Sansuy BI", color: "green-card" },
       { icon: "⚡", label: "Motor", value: "550 Watts Incluso", color: "blue-card" },
       { icon: "🏋️", label: "Cap. Peso", value: "até 100 kg", color: "pink-card" },
-      { icon: "⚡", label: "Vulcanizado", value: "100%", color: "blue-card" },
+      { icon: "⚡", label: "Vulcanizado", value: "Com Soldas Eletrônicas", color: "blue-card" },
     ],
     wpp: "Olá! Quero um orçamento do Guerra de Cotonete!"
   },
@@ -188,6 +195,7 @@ function buildCatalog(filter = 'all') {
             </div>
           `).join('')}
         </div>
+        <p class="card-more-hint">🔍 Clique para ver todas as especificações</p>
         <a class="btn-wpp-card"
            href="https://wa.me/5547991671813?text=${encodeURIComponent(p.wpp)}"
            target="_blank"

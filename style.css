@@ -513,6 +513,14 @@
   .spec-icon.pink { background: #ffe0f0; }
   .spec-icon.yellow { background: #fff9d6; }
 
+  .card-more-hint {
+    font-size: 0.90rem;
+    font-weight: 600;
+    color: #aaa;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
   .btn-wpp-card {
     width: 100%;
     background: #25D366;
