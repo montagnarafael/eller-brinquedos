@@ -1146,6 +1146,27 @@
 
 /* ===== CAROUSEL ===== */
 
+/* Foto vertical: card mais alto para não cortar a imagem */
+.product-img-wrap.vertical-photo {
+  height: 340px;
+}
+
+.product-img-wrap.vertical-photo .carousel-slide img {
+  object-fit: contain;
+  background: #f5f5f5;
+}
+
+/* Modal mais alto quando produto tem foto vertical */
+.modal-img.vertical-photo {
+  height: 460px !important;
+}
+
+.modal-img.vertical-photo .carousel-wrap,
+.modal-img.vertical-photo .carousel-track,
+.modal-img.vertical-photo .carousel-slide {
+  height: 460px !important;
+}
+
 /* O product-img-wrap já tem height:220px definido acima — não redefinir aqui */
 /* Apenas garantir que o carrossel ocupe 100% do wrapper */
 .product-img-wrap .carousel-wrap,

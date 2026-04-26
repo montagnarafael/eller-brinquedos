@@ -5,27 +5,33 @@ const products = [
   {
     id: 1,
     category: "tobogan",
-    name: "Tobogã Premium",
+    verticalPhoto: true,
+    name: "Tobogã Junior",
     badge: "Mais Vendido",
     images: [
-      "./img/tobogapremium.jpg",
-      "./img/tobogapremium2.jpg", 
+      "./img/tobogajunior.jpg",
+      "./img/tobogajunior3.jpg",
+      "./img/tobogajunior2.jpg",
       
     ],
     desc: "O clássico tobogã inflável para festas e eventos. Alta resistência, diversão garantida para as crianças!",
     color: "#e0f5ff",
     specs: [
+      { icon: "📐", label: "Comprimento", value: "3.30 metros", color: "pink-card" },
+      { icon: "📏", label: "Largura", value: "2.10 metros", color: "yellow-card" },
+      { icon: "📏", label: "Altura", value: "2.80 metros", color: "yellow-card" },
+      { icon: "⚡", label: "Motor", value: "Incluso", color: "blue-card" },
       { icon: "👶", label: "Faixa Etária", value: "3 a 12 anos", color: "blue-card" },
+      { icon: "💰", label: "R$", value: "A Consultar", color: "blue-card" },
       { icon: "💰", label: "Parcelamento", value: "até 12x no Cartão", color: "pink-card" },
       { icon: "✅", label: "Garantia", value: "6 Meses Contra Defeitos de Fabricação", color: "pink-card" },
-      { icon: "📐", label: "Comprimento", value: "5 metros", color: "pink-card" },
-      { icon: "📏", label: "Largura", value: "2.80 metros", color: "yellow-card" },
-      { icon: "📏", label: "Altura", value: "4.20 metros", color: "yellow-card" },
-      { icon: "🧵", label: "Material", value: "Lonas kp1000", color: "green-card" },
-      { icon: "⚡", label: "Motor", value: "Incluso", color: "blue-card" },
-      { icon: "🏋️", label: "Cap. Peso", value: "até 150 kg", color: "pink-card" },
+      { icon: "⚡", label: "Soldas", value: "Eletrônicas Por Vulcanização", color: "yellow-card" },
+      { icon: "🧵", label: "Material", value: "Lonas kp1000 Sansuy Bi", color: "green-card" },
+      { icon: "💯 ", label: "Produção Personalizada", value: "Tamanhos e Cores Diferenciados", color: "pink-card" },
+      
+      
     ],
-    wpp: "Olá! Tenho interesse no Tobogã Premium!. Podem me enviar o preço?"
+    wpp: "Olá! Tenho interesse no Tobogã Junior!. Podem me enviar o preço?"
   },
   {
     id: 2,
@@ -35,40 +41,92 @@ const products = [
     images: [
       "./img/futeboldesabao.jpg",
       "./img/futeboldesabao2.jpg",
+      "./img/futeboldesabao8.jpg",
+      "./img/futeboldesabao9.jpg",
+      "./img/futeboldesabao3.jpg",
+      "./img/futeboldesabao4.jpg",
+      "./img/futeboldesabao5.jpg",
+      "./img/futeboldesabao6.jpg",
+      "./img/futeboldesabao7.jpg",
+      
+    ],
+    cardImages: [
+      "./img/futeboldesabao.jpg",
+      "./img/futeboldesabao2.jpg",
+      "./img/futeboldesabao8.jpg",
+      "./img/futeboldesabao9.jpg",
+      "./img/futeboldesabao3.jpg",
     ],
     desc: "Diversão garantida com o Futebol de Sabão! Arena inflável para jogar futebol em superfície escorregadia.",
     color: "#ffe0f0",
     specs: [
-      { icon: "👶", label: "Faixa Etária", value: "5 a 14 anos", color: "blue-card" },
-      { icon: "📐", label: "Comprimento", value: "8 metros", color: "pink-card" },
-      { icon: "📏", label: "Largura", value: "4 metros", color: "yellow-card" },
-      { icon: "📏", label: "Altura Parede", value: "70cm", color: "yellow-card" },
-      { icon: "🧵", label: "Material", value: "Lona kp1000", color: "green-card" },
-      { icon: "👥", label: "Capacidade", value: "10 jogadores", color: "blue-card" },
+      { icon: "🧵", label: "Material", value: "Lona kp1000 Sansuy Bi", color: "green-card" },
+      { icon: "💰", label: "R$", value: "A Consultar", color: "blue-card" },
       { icon: "⚡", label: "Motor", value: "Incluso", color: "pink-card" },
+      { icon: "👶", label: "Faixa Etária", value: "Crianças e Adultos", color: "blue-card" },
+      { icon: "📐", label: "Tamanho", value: "8 x 4 ... 10 x 5", color: "pink-card" },
+      { icon: "📏", label: "Parede Latereal", value: "70cm a 90cm", color: "yellow-card" },
+      { icon: "⚡", label: "Soldas", value: "Eletrônicas Por Vulcanização", color: "yellow-card" },
+      { icon: "💰", label: "Parcelamento", value: "12x Cartão", color: "blue-card" },
+      { icon: "🛡️ ", label: "Garantia", value: "6 Meses Contra Defeitos de Fabricação", color: "pink-card" },
+      { icon: "💯 ", label: "Produção Personalizada", value: "Tamanhos e Cores Diferenciados", color: "pink-card" },
     ],
     wpp: "Olá! Quero saber o preço do Futebol de Sabão!"
   },
   {
     id: 3,
     category: "piscina",
-    name: "Piscina de Bolinhas",
+    name: "Piscina de Bolinhas Castelo",
     badge: "Infantil",
     images: [
       "./img/piscinadebolinhas.jpg",
       "./img/piscinadebolinhas2.jpg",
+      "./img/piscinadebolinhas3.jpg",
+      "./img/piscinadebolinhas4.jpg",
     ],
     desc: "Piscina inflável de bolinhas coloridas, perfeita para os pequenos se divertirem em festas e eventos.",
     color: "#fff9d6",
     specs: [
-      { icon: "👶", label: "Faixa Etária", value: "1 a 6 anos", color: "blue-card" },
-      { icon: "📐", label: "Comprimento", value: "2.80 metros", color: "pink-card" },
-      { icon: "📏", label: "Largura", value: "2.80 metros", color: "yellow-card" },
-      { icon: "📏", label: "Altura", value: "2.20 metros", color: "yellow-card" },
-      { icon: "🧵", label: "Material", value: "Lonas kp1000", color: "green-card" },
-      { icon: "🏋️", label: "Cap. Peso", value: "até 80 kg", color: "pink-card" },
+      { icon: "📐", label: "Tamanho", value: "3 x 3 | 2.80 x 2.80...", color: "pink-card" },
+      { icon: "🧵", label: "Material", value: "Lona kp1000 Sansuy Bi", color: "green-card" },
+      { icon: "⚡", label: "Motor", value: "Incluso", color: "pink-card" },
+      { icon: "💰", label: "R$", value: "A Consultar", color: "blue-card" },
+      { icon: "💰", label: "Parcelamento", value: "12x Cartão", color: "blue-card" },
+      { icon: "👶", label: "Faixa Etária", value: "Crianças e Adultos", color: "blue-card" },
+      { icon: "📏", label: "Altura Total", value: "2.50m", color: "yellow-card" },
+      { icon: "⚡", label: "Soldas", value: "Eletrônicas Por Vulcanização", color: "yellow-card" },
+      { icon: "🛡️ ", label: "Garantia", value: "6 Meses Contra Defeitos de Fabricação", color: "pink-card" },
+      { icon: "💯 ", label: "Produção Personalizada", value: "Tamanhos e Cores Diferenciados", color: "pink-card" },
     ],
-    wpp: "Olá! Quero um orçamento da Piscina de Bolinhas!"
+    wpp: "Olá! Quero um orçamento da Piscina de Bolinhas Castelo!"
+  },
+  {
+id: 4,
+    category: "piscina",
+    name: "Piscina de Bolinhas Tradicional",
+    badge: "Infantil",
+    images: [
+      "./img/piscinadebolinhastrad.jpg",
+      "./img/piscinadebolinhastrad2.jpg",
+      "./img/piscinadebolinhastrad3.jpg",
+      "./img/piscinadebolinhastrad4.jpg",
+    ],
+    desc: "Piscina inflável de bolinhas coloridas, perfeita para os pequenos se divertirem em festas e eventos.",
+    color: "#fff9d6",
+    specs: [
+      { icon: "💰", label: "Parcelamento", value: "12x Cartão", color: "blue-card" },
+      { icon: "🛡️ ", label: "Garantia", value: "6 Meses Contra Defeitos de Fabricação", color: "pink-card" },
+      { icon: "💯 ", label: "Produção Personalizada", value: "Tamanhos e Cores Diferenciados", color: "pink-card" },
+      { icon: "📐", label: "Tamanho", value: "3 x 3 | 2.80 x 2.80...", color: "pink-card" },
+      { icon: "🧵", label: "Material", value: "Lona kp1000 Sansuy Bi", color: "green-card" },
+      { icon: "⚡", label: "Motor", value: "Incluso", color: "pink-card" },
+      { icon: "💰", label: "R$", value: "A Consultar", color: "blue-card" },
+      { icon: "👶", label: "Faixa Etária", value: "Crianças e Adultos", color: "blue-card" },
+      { icon: "📏", label: "Altura Total", value: "2.20m", color: "yellow-card" },
+      { icon: "⚡", label: "Soldas", value: "Eletrônicas Por Vulcanização", color: "yellow-card" },
+      
+    ],
+    wpp: "Olá! Quero um orçamento da Piscina de Bolinhas Tradicional!"
   },
   {
     id: 5,
@@ -97,19 +155,148 @@ const products = [
     ],
     wpp: "Olá! Quero um orçamento do Guerra de Cotonete!"
   },
+  {
+    id: 6,
+    category: "toboagua",
+    verticalPhoto: true,
+    name: "Toboágua Splash",
+    badge: "Clássico",
+    images: [
+      "./img/toboaguasplash.jpg",
+      "./img/toboaguasplash2.jpg",
+      "./img/toboaguasplash3.jpg",
+      "./img/toboaguasplash4.jpg",
+      "./img/toboaguasplash5.jpg",
+      "./img/toboaguasplash6.jpg",
+    ],
+    desc: "Toboágua inflável com descida radical, diversão e refresco garantidos para toda a família!",
+    color: "#f0e0ff",
+    specs: [
+      { icon: "💯 ", label: "Produção Personalizada", value: "Tamanhos e Cores Diferenciados", color: "pink-card" },
+      { icon: "⚡", label: "Vulcanizado", value: "Com Soldas Eletrônicas", color: "blue-card" },
+      { icon: "💰", label: "Parcelamento", value: "até 12x no Cartão", color: "pink-card" },
+      { icon: "✅", label: "Garantia", value: "6 Meses Contra Defeitos de Fabricação", color: "pink-card" },
+      { icon: "📐", label: "Comprimento", value: "7.80 metros", color: "pink-card" },
+      { icon: "📏", label: "Largura", value: "2.80 metros", color: "yellow-card" },
+      { icon: "📏", label: "Altura Total", value: "4.20 metros", color: "yellow-card" },
+      { icon: "🧵", label: "Material", value: "Lona kp1000 Sansuy BI", color: "green-card" },
+      { icon: "⚡", label: "Motor", value: "Incluso", color: "blue-card" },
+      { icon: "👶", label: "Faixa Etária", value: "Crianças até 12 anos", color: "blue-card" },
+      
+    ],
+    wpp: "Olá! Quero um orçamento do Toboágua Splash!"
+  },
+  {
+    id: 7,
+    category: "toboagua",
+    name: "Toboágua Splash Premium",
+    badge: "Clássico",
+    images: [
+      "./img/splashpremium.jpg",
+      "./img/splashpremium2.jpg",
+      "./img/splashpremium3.jpg",
+      "./img/splashpremium4.jpg",
+      "./img/splashpremium5.jpg",
+      "./img/splashpremium6.jpg",
+    
+    ],
+    desc: "Toboágua inflável com descida radical, diversão e refresco garantidos para toda a família!",
+    color: "#f0e0ff",
+    specs: [
+      { icon: "💯 ", label: "Produção Personalizada", value: "Tamanhos e Cores Diferenciados", color: "pink-card" },
+      { icon: "🧵", label: "Material", value: "Lona kp1000 Sansuy BI", color: "green-card" },
+      { icon: "💰", label: "Parcelamento", value: "até 12x no Cartão", color: "pink-card" },
+      { icon: "✅", label: "Garantia", value: "6 Meses Contra Defeitos de Fabricação", color: "pink-card" },
+      { icon: "📐", label: "Comprimento", value: "5 metros", color: "pink-card" },
+      { icon: "📏", label: "Largura", value: "2.80 metros", color: "yellow-card" },
+      { icon: "📏", label: "Altura Total", value: "4.20 metros", color: "yellow-card" },
+      { icon: "⚡", label: "Vulcanizado", value: "Com Soldas Eletrônicas", color: "blue-card" },
+      { icon: "⚡", label: "Motor", value: "Incluso", color: "blue-card" },
+      { icon: "👶", label: "Faixa Etária", value: "Crianças até 12 anos", color: "blue-card" },
+      
+    ],
+    wpp: "Olá! Quero um orçamento do Toboágua Splash Premium!"
+  },
+  {
+    id: 8,
+    category: "tobogan",
+    verticalPhoto: true,
+    name: "Tobogã Premium",
+    badge: "Clássico",
+    images: [
+      "./img/tobogapremium.jpg",
+      "./img/splashpremium2.jpg",
+      "./img/splashpremium3.jpg",
+      "./img/splashpremium4.jpg",
+      "./img/splashpremium5.jpg",
+      "./img/splashpremium6.jpg",
+    
+    ],
+    desc: "Tobogã inflável com descida radical, diversão garantida para toda a família!",
+    color: "#f0e0ff",
+    specs: [
+      { icon: "💯", label: "Produção Personalizada", value: "Tamanhos e Cores Diferenciados", color: "pink-card" },
+      { icon: "💰", label: "R$", value: "A Consultar", color: "blue-card" },
+      { icon: "✅", label: "Garantia", value: "6 Meses Contra Defeitos de Fabricação", color: "pink-card" },
+      { icon: "🧵", label: "Material", value: "Lona kp1000 Sansuy BI", color: "green-card" },
+      { icon: "💰", label: "Parcelamento", value: "até 12x no Cartão", color: "pink-card" },
+      { icon: "📐", label: "Comprimento", value: "5 metros", color: "pink-card" },
+      { icon: "📏", label: "Largura", value: "2.80 metros", color: "yellow-card" },
+      { icon: "📏", label: "Altura Total", value: "4.20 metros", color: "yellow-card" },
+      { icon: "⚡", label: "Vulcanizado", value: "Com Soldas Eletrônicas", color: "blue-card" },
+      { icon: "⚡", label: "Motor", value: "Incluso", color: "blue-card" },
+      { icon: "👶", label: "Faixa Etária", value: "Crianças até 12 anos", color: "blue-card" },
+      
+    ],
+    wpp: "Olá! Quero um orçamento do Tobogã Premium!"
+  },
+  {
+    id: 9,
+    category: "tobogan",
+    name: "Tobogã/Toboágua Premium",
+    badge: "Clássico",
+    images: [
+      "./img/tobogatoboaguapremium.jpg",
+      "./img/tobogatoboaguapremium2.jpg",
+      "./img/tobogatoboaguapremium3.jpg",
+      "./img/tobogatoboaguapremium4.jpg",
+      "./img/tobogatoboaguapremium5.jpg",
+      "./img/tobogatoboaguapremium6.jpg",
+      "./img/tobogatoboaguapremium7.jpg",
+      "./img/tobogatoboaguapremium8.jpg",
+    ],
+    desc: "Tobogã Premium inflável com acabamento superior, diversão e adrenalina garantidas para toda a família!",
+    color: "#f0e0ff",
+    specs: [
+      { icon: "💯", label: "Produção Personalizada", value: "Tamanhos e Cores Diferenciados", color: "pink-card" },
+      { icon: "💰", label: "R$", value: "A Consultar", color: "blue-card" },
+      { icon: "✅", label: "Garantia", value: "6 Meses Contra Defeitos de Fabricação", color: "pink-card" },
+      { icon: "🧵", label: "Material", value: "Lona kp1000 Sansuy BI", color: "green-card" },
+      { icon: "💰", label: "Parcelamento", value: "até 12x no Cartão", color: "pink-card" },
+      { icon: "📐", label: "Comprimento", value: "5 metros", color: "pink-card" },
+      { icon: "📏", label: "Largura", value: "2.80 metros", color: "yellow-card" },
+      { icon: "📏", label: "Altura Total", value: "4.20 metros", color: "yellow-card" },
+      { icon: "⚡", label: "Vulcanizado", value: "Com Soldas Eletrônicas", color: "blue-card" },
+      { icon: "⚡", label: "Motor", value: "Incluso", color: "blue-card" },
+      { icon: "👶", label: "Faixa Etária", value: "Crianças até 12 anos", color: "blue-card" },
+      
+    ],
+    wpp: "Olá! Quero um orçamento do Tobogã/Toboágua Premium!"
+  },
 ];
 
 // ===== CAROUSEL STATE =====
 const carouselState = {};
 
-function getImages(p) {
+function getImages(p, context) {
+  if (context === 'card' && p.cardImages && p.cardImages.length > 0) return p.cardImages;
   if (p.images && p.images.length > 0) return p.images;
   if (p.image) return [p.image];
   return [];
 }
 
 function buildCarousel(p, context) {
-  const imgs = getImages(p);
+  const imgs = getImages(p, context);
   if (!carouselState[p.id]) carouselState[p.id] = { card: 0, modal: 0 };
   const idx = carouselState[p.id][context];
   const hasMany = imgs.length > 1;
@@ -143,7 +330,7 @@ function buildCarousel(p, context) {
 function changeSlide(productId, context, dir) {
   const p = products.find(x => x.id === productId);
   if (!p) return;
-  const imgs = getImages(p);
+  const imgs = getImages(p, context);
   if (!carouselState[productId]) carouselState[productId] = { card: 0, modal: 0 };
   carouselState[productId][context] = (carouselState[productId][context] + dir + imgs.length) % imgs.length;
   updateCarousel(productId, context);
@@ -182,7 +369,7 @@ function buildCatalog(filter = 'all') {
     card.onclick = () => openModal(p.id);
     card.innerHTML = `
       <span class="product-card-badge">${p.badge}</span>
-      <div class="product-img-wrap">
+      <div class="product-img-wrap${p.verticalPhoto ? ' vertical-photo' : ''}">
         ${buildCarousel(p, 'card')}
       </div>
       <div class="product-info">
@@ -234,6 +421,7 @@ function openModal(id) {
 
   const modalImg = document.getElementById('modalImg');
   modalImg.style.background = p.color;
+  modalImg.className = 'modal-img' + (p.verticalPhoto ? ' vertical-photo' : '');
   modalImg.innerHTML = buildCarousel(p, 'modal');
 
   document.getElementById('modalBadge').textContent = p.badge;
