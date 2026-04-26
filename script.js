@@ -5,7 +5,6 @@ const products = [
   {
     id: 1,
     category: "tobogan",
-    verticalPhoto: true,
     name: "Tobogã Junior",
     badge: "Mais Vendido",
     images: [
