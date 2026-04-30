@@ -5,6 +5,7 @@ const products = [
   {
     id: 1,
     category: "tobogan",
+    verticalPhoto: true,
     name: "Tobogã Junior",
     badge: "Mais Vendido",
     images: [
@@ -316,7 +317,7 @@ function buildCarousel(p, context) {
 
   return `
     <div class="carousel-wrap" id="carousel-${context}-${p.id}">
-      <div class="carousel-track" style="transform: translateX(-${idx * 100}%)">
+      <div class="carousel-track" style="transform: translateX(0px)">
         ${imgs.map(src => `<div class="carousel-slide"><img src="${src}" alt="${p.name}"></div>`).join('')}
       </div>
       ${prevBtn}
@@ -349,7 +350,11 @@ function updateCarousel(productId, context) {
   if (!wrap) return;
 
   const track = wrap.querySelector('.carousel-track');
-  if (track) track.style.transform = `translateX(-${idx * 100}%)`;
+  if (track) {
+    const slide = track.querySelector('.carousel-slide');
+    const slideWidth = slide ? slide.offsetWidth : wrap.offsetWidth;
+    track.style.transform = `translateX(-${idx * slideWidth}px)`;
+  }
 
   wrap.querySelectorAll('.carousel-dot').forEach((dot, i) => {
     dot.classList.toggle('active', i === idx);
@@ -483,3 +488,21 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// ===== RECALCULAR CAROUSEL AO REDIMENSIONAR =====
+window.addEventListener('resize', () => {
+  Object.keys(carouselState).forEach(productId => {
+    ['card', 'modal'].forEach(context => {
+      const wrap = document.getElementById(`carousel-${context}-${productId}`);
+      if (!wrap) return;
+      const track = wrap.querySelector('.carousel-track');
+      if (!track) return;
+      const slide = track.querySelector('.carousel-slide');
+      const idx = carouselState[productId][context] || 0;
+      const slideWidth = slide ? slide.offsetWidth : wrap.offsetWidth;
+      track.style.transition = 'none';
+      track.style.transform = `translateX(-${idx * slideWidth}px)`;
+      requestAnimationFrame(() => { track.style.transition = ''; });
+    });
+  });
+});

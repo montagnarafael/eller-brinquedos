@@ -36,17 +36,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 72px;
+    height: 84px;
   }
 
   .navbar-logo img {
-    height: 52px;
+    height: 150px;
     width: auto;
   }
 
   .navbar-logo .logo-text {
     font-family: 'Fredoka One', cursive;
-    font-size: 1.8rem;
+    font-size: 2.6rem;
     display: flex;
     gap: 0;
   }
@@ -57,11 +57,11 @@
   .navbar-logo .logo-text span:nth-child(5) { color: var(--yellow); }
   .navbar-logo .logo-sub {
     font-family: 'Fredoka One', cursive;
-    font-size: 0.75rem;
+    font-size: 1rem;
     color: var(--pink);
     display: block;
     text-align: center;
-    margin-top: -4px;
+    margin-top: -6px;
   }
 
   .nav-links {
@@ -127,7 +127,7 @@
   .mobile-menu {
     display: none;
     position: fixed;
-    top: 72px; left: 0; right: 0;
+    top: 84px; left: 0; right: 0;
     background: white;
     padding: 20px 5%;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
@@ -158,7 +158,9 @@
     overflow: hidden;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 100px 5% 60px;
+    text-align: center;
   }
 
   .hero-blob-1 {
@@ -191,7 +193,11 @@
   .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 600px;
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .hero-tag {
@@ -225,12 +231,14 @@
     line-height: 1.7;
     margin-bottom: 36px;
     font-weight: 600;
+    text-align: center;
   }
 
   .hero-buttons {
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .btn-primary {
@@ -270,6 +278,7 @@
     gap: 30px;
     margin-top: 50px;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .stat {
@@ -424,6 +433,8 @@
     transition: all 0.3s ease;
     cursor: pointer;
     position: relative;
+    display: flex;
+    flex-direction: column;
   }
 
   .product-card:hover {
@@ -446,13 +457,10 @@
   }
 
   .product-img-wrap {
-    height: 220px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
     overflow: hidden;
     background: linear-gradient(135deg, #e0f5ff, #ffe0f5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 5rem;
     position: relative;
   }
 
@@ -474,6 +482,9 @@
 
   .product-info {
     padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
   }
 
   .product-name {
@@ -518,6 +529,7 @@
     font-weight: 600;
     color: #aaa;
     text-align: center;
+    margin-top: auto;
     margin-bottom: 12px;
   }
 
@@ -598,9 +610,11 @@
   .modal-close:hover { background: #c0207a; }
 
   .modal-img {
-    width: 100%;
-    height: 320px;
-    border-radius: 28px 28px 0 0;
+    width: min(100%, 300px);
+    aspect-ratio: 1 / 1;
+    height: auto;
+    margin: 20px auto 0;
+    border-radius: 20px;
     background: linear-gradient(135deg, #e0f5ff, #ffe0f5);
     overflow: hidden;
     position: relative;
@@ -1037,9 +1051,13 @@
   }
 
   @media (max-width: 768px) {
-    .navbar { padding: 0 4%; }
+    .navbar { padding: 0 4%; height: 72px; }
     .nav-links { display: none; }
     .hamburger { display: flex; }
+
+    .navbar-logo .logo-text { font-size: 2rem; }
+    .navbar-logo .logo-sub { font-size: 0.8rem; }
+    .mobile-menu { top: 72px; }
 
     section { padding: 60px 4%; }
     .catalog-section { padding: 60px 4%; }
@@ -1146,33 +1164,39 @@
 
 /* ===== CAROUSEL ===== */
 
-/* Foto vertical: card mais alto para não cortar a imagem */
-.product-img-wrap.vertical-photo {
-  height: 340px;
-}
+/* vertical-photo: sem override — todos os containers são quadrados uniformes */
 
-.product-img-wrap.vertical-photo .carousel-slide img {
-  object-fit: contain;
-  background: #f5f5f5;
-}
-
-/* Modal mais alto quando produto tem foto vertical */
-.modal-img.vertical-photo {
-  height: 460px !important;
-}
-
-.modal-img.vertical-photo .carousel-wrap,
-.modal-img.vertical-photo .carousel-track,
-.modal-img.vertical-photo .carousel-slide {
-  height: 460px !important;
-}
-
-/* O product-img-wrap já tem height:220px definido acima — não redefinir aqui */
-/* Apenas garantir que o carrossel ocupe 100% do wrapper */
-.product-img-wrap .carousel-wrap,
-.product-img-wrap .carousel-track,
-.product-img-wrap .carousel-slide {
+/* Carrossel do catálogo — scroll-snap nativo, sem translateX */
+.product-img-wrap .carousel-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
   height: 100%;
+  overflow: hidden;
+}
+
+.product-img-wrap .carousel-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.product-img-wrap .carousel-slide {
+  width: 100%;
+  min-width: 100%;
+  flex-shrink: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.product-img-wrap .carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .carousel-wrap {
@@ -1192,6 +1216,7 @@
   min-width: 100%;
   flex-shrink: 0;
   height: 100%;
+  overflow: hidden;
 }
 
 .carousel-slide img {
@@ -1202,24 +1227,24 @@
   display: block;
 }
 
-/* Modal: carrossel com altura fixa para não depender de cadeia de 100% */
+/* Modal: carrossel segue o container quadrado */
 .modal-img .carousel-wrap {
-  height: 320px;
+  height: 100%;
   width: 100%;
 }
 .modal-img .carousel-track {
-  height: 320px;
+  height: 100%;
   width: 100%;
 }
 .modal-img .carousel-slide {
-  height: 320px;
+  height: 100%;
   width: 100%;
 }
 
 /* No modal, mostrar imagem inteira sem cortar */
 .modal-img .carousel-slide img {
   object-fit: contain;
-  background: #f0f0f0;
+  background: #f5f8ff;
 }
 
 /* Botões prev/next */
@@ -1296,3 +1321,4 @@
   width: 10px;
   height: 10px;
 }
+
